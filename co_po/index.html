@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO-PO Mapping</title>
+      <style>
+body{
+    font-family: Arial;
+}
+table{
+    width:95%;
+    border-collapse:collapse;
+    margin:20px auto;
+}
+th,td{
+    border:1px solid black;
+    padding:6px;
+    text-align:center;
+}
+input{
+    width:95%;
+    padding:4px;
+}
+.main{
+    text-align:center;
+    background:rgba(24,237,237,0.5);
+    padding:10px;
+}
+.button-container{
+    text-align:center;
+    margin:20px;
+}
+button{
+    padding:8px 15px;
+    margin:5px;
+}
+
+
+@media print{
+    button{display:none;}
+}
+</style>
+</head>
+<body>
+
+    <h3 class="main">Course Outcomes:</h3>
+
+<table id="coTable">
+<tr>
+    <th>CO1</th>
+    <td><input id="course1" placeholder="Enter CO1"></td>
+    <td id="KC1"></td>
+</tr>
+<tr>
+    <th>CO2</th>
+    <td><input id="course2" placeholder="Enter CO2"></td>
+    <td id="KC2"></td>
+</tr>
+<tr>
+    <th>CO3</th>
+    <td><input id="course3" placeholder="Enter CO3"></td>
+    <td id="KC3"></td>
+</tr>
+<tr>
+    <th>CO4</th>
+    <td><input id="course4" placeholder="Enter CO4"></td>
+    <td id="KC4"></td>
+</tr>
+<tr>
+    <th>CO5</th>
+    <td><input id="course5" placeholder="Enter CO5"></td>
+    <td id="KC5"></td>
+</tr>
+</table>
+
+<div class="button-container">
+<button onclick="addCORow()">Add CO Row</button>
+</div>
+
+
+<h3 class="main">CO-PO - PSO Mapping</h3>
+
+<table id="mappingTable">
+
+<tr>
+<th rowspan="2">CO</th>
+<th colspan="2">PO</th>
+<th>PO1</th>
+<th>PO2</th>
+<th>PO3</th>
+<th>PO4</th>
+<th>PO5</th>
+<th>PO6</th>
+<th>PO7</th>
+<th>PO8</th>
+<th>PO9</th>
+<th>PO10</th>
+<th>PO11</th>
+<th>PSO1</th>
+<th>PSO2</th>
+</tr>
+
+<tr>
+<th colspan="2">K-LEVEL</th>
+<th>K3</th>
+<th>K4</th>
+<th>K5</th>
+<th>K5</th>
+<th>K6</th>
+<th>K3</th>
+<th>K2</th>
+<th>K3</th>
+<th>K3</th>
+<th>K2</th>
+<th>K3</th>
+<th>K3</th>
+<th>K4</th>
+</tr>
+
+<tbody id="mappingBody">
+
+<tr>
+<th>CO1</th>
+    <td colspan="2" id="KL1"></td>
+    <td id="R1C1"></td><td id="R1C2"></td><td id="R1C3"></td><td id="R1C4"></td><td id="R1C5"></td>
+    <td id="R1C6"></td><td id="R1C7"></td><td id="R1C8"></td><td id="R1C9"></td><td id="R1C10"></td>
+    <td id="R1C11"></td><td id="R1C12"></td><td id="R1C13"></td>
+</tr>
+
+<tr>
+    <th>CO2</th>
+    <td colspan="2" id="KL2"></td>
+    <td id="R2C1"></td><td id="R2C2"></td><td id="R2C3"></td><td id="R2C4"></td><td id="R2C5"></td>
+    <td id="R2C6"></td><td id="R2C7"></td><td id="R2C8"></td><td id="R2C9"></td><td id="R2C10"></td>
+    <td id="R2C11"></td><td id="R2C12"></td><td id="R2C13"></td>
+</tr>
+
+<tr>
+    <th>CO3</th>
+    <td colspan="2" id="KL3"></td>
+    <td id="R3C1"></td><td id="R3C2"></td><td id="R3C3"></td><td id="R3C4"></td><td id="R3C5"></td>
+    <td id="R3C6"></td><td id="R3C7"></td><td id="R3C8"></td><td id="R3C9"></td><td id="R3C10"></td>
+    <td id="R3C11"></td><td id="R3C12"></td><td id="R3C13"></td>
+</tr>
+
+<tr>
+    <th>CO4</th>
+    <td colspan="2" id="KL4"></td>
+    <td id="R4C1"></td><td id="R4C2"></td><td id="R4C3"></td><td id="R4C4"></td><td id="R4C5"></td>
+    <td id="R4C6"></td><td id="R4C7"></td><td id="R4C8"></td><td id="R4C9"></td><td id="R4C10"></td>
+    <td id="R4C11"></td><td id="R4C12"></td><td id="R4C13"></td>
+</tr>
+
+<tr>
+    <th>CO5</th>
+    <td colspan="2" id="KL5"></td>
+    <td id="R5C1"></td><td id="R5C2"></td><td id="R5C3"></td><td id="R5C4"></td><td id="R5C5"></td>
+    <td id="R5C6"></td><td id="R5C7"></td><td id="R5C8"></td><td id="R5C9"></td><td id="R5C10"></td>
+    <td id="R5C11"></td><td id="R5C12"></td><td id="R5C13"></td>
+</tr>
+
+<tr>
+    <th colspan="3">Course Contribution</th>
+    <td id="cc1"></td><td id="cc2"></td><td id="cc3"></td><td id="cc4"></td><td id="cc5"></td>
+    <td id="cc6"></td><td id="cc7"></td><td id="cc8"></td><td id="cc9"></td><td id="cc10"></td>
+    <td id="cc11"></td><td id="cc12"></td><td id="cc13"></td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="button-container">
+<button onclick="checkword()">Check Mapping</button>
+<button onclick="resetManualEdits()">Reset Manual Edits</button>
+<button onclick="exportPDF()">Export to PDF</button>
+</div>
+
+
+<script>
+
+let coCount = 5;
+
+function addCORow(){
+    coCount++;
+
+    let coTable=document.getElementById("coTable");
+    let row=coTable.insertRow();
+    row.innerHTML=`
+        <th>CO${coCount}</th>
+        <td><input id="course${coCount}"></td>
+        <td id="KC${coCount}"></td>
+    `;
+
+    let mapBody=document.getElementById("mappingBody");
+    let mapRow=mapBody.insertRow(mapBody.rows.length-1);
+
+    let cells=`<th>CO${coCount}</th>
+    <td colspan="2" id="KL${coCount}"></td>`;
+
+    for(let j=1;j<=13;j++){
+        cells+=`<td id="R${coCount}C${j}">-</td>`;
+    }
+
+    mapRow.innerHTML=cells;
+}
+
+function getActionWord(sentence){
+    return sentence.trim().split(" ")[0].toLowerCase();
+}
+
+function checkKeywordMatch(text, keywords){
+    for(let word of keywords){
+        if(text.includes(word)){
+            return 2;
+        }
+    }
+    return "-";
+}
+
+
+function calculateCourseContribution(){
+    for(let col=1; col<=13; col++){
+
+        let totalCell=document.getElementById("cc"+col);
+
+        if(totalCell && totalCell.classList.contains("manual-edit")){
+            continue;
+        }
+
+        let total=0;
+
+        for(let row=1; row<=coCount; row++){
+            let cell=document.getElementById("R"+row+"C"+col);
+            if(!cell) continue;
+
+            let value=parseInt(cell.innerText);
+            if(!isNaN(value)){
+                total+=value;
+            }
+        }
+
+        if(totalCell){
+            totalCell.innerHTML=total;
+        }
+    }
+}
+
+function checkword(){
+    
+    let remembering=["copying","defining","finding","locating","quoting","listening","googling","repeating","retrieving","outlining","highlighting","memorizinig","networking","searching","identifying","selecting","tabulating","duplicating","matching","bookmarking","bullet-pointing","list","recite","define","name","match","quote","recall","identify","label","recognize"];
+
+    let understanding=["annotating","tweeting","associating","tagging","summarizing","relating","categorizing","paraphrasing","predicting","comparing","contrasting","commenting","journaling","interpreting","grouping","inferring","estimating","extending","gathering","exemplifying","expressing","describe","explain","paraphrase","restate","give original examples of","illustrate","summarize","contrast","interpret","discuss","outline"];
+
+    let applying=["deconstructing","organizing","attributing","outlining","finding","structuring","integrating","mapping","dissecting","relating","comparing","contrasting","distinguishing","examine","experimenting","questioning"];
+
+    let analyzing=["checking","hypothesizing","critique","experimenting","judging","testing","detecting","monitoring","measuring","assessing","comparing","discriminating","justifying","verifying","appraising","argue","defend","judge","select","support"];
+
+    let creating=["design","construct","plan","produce","invent"];
+
+    let table=document.getElementById("mappingTable");
+    let headerRow=table.rows[1];
+
+    for(let i=1;i<=coCount;i++){   
+        let input=document.getElementById("course"+i);
+        if(!input) continue;
+
+        let sentence=input.value;
+
+        if(sentence.trim()===""){
+            document.getElementById("KC"+i).innerHTML="";
+            document.getElementById("KL"+i).innerHTML="";
+            for(let j=1;j<=13;j++){
+                let cell=document.getElementById("R"+i+"C"+j);
+                if(cell && !cell.classList.contains("manual-edit")){
+                    cell.innerHTML="-";
+                }
+            }
+            continue;
+        }
+
+        let word=getActionWord(sentence);
+        let level=0;
+
+        if(remembering.includes(word)) level=1;
+        else if(understanding.includes(word)) level=2;
+        else if(applying.includes(word)) level=3;
+        else if(analyzing.includes(word)) level=4;
+        else if(creating.includes(word)) level=5;
+
+        document.getElementById("KC"+i).innerHTML=level?"K"+level:"Unknown";
+        document.getElementById("KL"+i).innerHTML=level?"K"+level:"Unknown";
+
+        for(let j=1;j<=5;j++){
+            let cell=document.getElementById("R"+i+"C"+j);
+            if(!cell) continue;
+            if(cell.classList.contains("manual-edit")) continue;
+
+            let poK=parseInt(headerRow.cells[j].innerText.substring(1));
+            let diff=Math.abs(level-poK);
+
+            if(!level) cell.innerHTML="-";
+            else if(diff===0) cell.innerHTML="3";
+            else if(diff===1) cell.innerHTML="2";
+            else if(diff===2) cell.innerHTML="1";
+            else cell.innerHTML="-";
+        }
+
+        let sentenceLower=sentence.toLowerCase();
+
+        let keywordGroups=[
+            ["society","healthcare","impact","safety","social"],
+            ["environment","sustainable","energy","pollution"], 
+            ["ethics","professional","integrity"], 
+            ["team","collaborate","group"], 
+            ["present","communicate","report"], 
+            ["project","management","plan"], 
+            ["research","explore","innovate"] 
+        ];
+
+        for(let k=0;k<keywordGroups.length;k++){
+            let cell=document.getElementById("R"+i+"C"+(k+6));
+            if(!cell) continue;
+            if(cell.classList.contains("manual-edit")) continue;
+            cell.innerHTML=checkKeywordMatch(sentenceLower, keywordGroups[k]);
+        }
+    }
+
+    calculateCourseContribution();  
+}
+
+
+document.addEventListener("click",function(e){
+
+    if(
+        e.target.tagName==="TD" &&
+        (e.target.id.startsWith("R") || e.target.id.startsWith("cc"))
+    ){
+
+        let cell=e.target;
+
+        if(cell.querySelector("input")) return;
+
+        let oldValue=cell.innerText;
+
+        let input=document.createElement("input");
+        cell.innerHTML="";
+        input.type="text";
+        input.value=oldValue;
+        input.style.width="40px";
+        cell.appendChild(input);
+        input.focus();
+
+        input.onblur=function(){
+            let newVal=input.value;
+            cell.innerHTML=newVal;
+
+            if(newVal!==oldValue){
+                cell.classList.add("manual-edit");
+            }
+
+            if(cell.id.startsWith("R")){
+                calculateCourseContribution();
+            }
+        };
+    }
+});
+
+function resetManualEdits(){
+    document.querySelectorAll(".manual-edit").forEach(cell=>{
+        cell.classList.remove("manual-edit");
+    });
+    checkword();
+}
+
+function exportPDF(){
+    window.print();
+}
+
+</script>
+
+</body>
+</html>

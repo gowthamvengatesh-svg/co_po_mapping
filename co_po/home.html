@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+<a href="home.html">Home</a>
+<a href="mapping.html">Mapping</a>
+<a href="table.html">Table</a>
+<button onclick="toggleDark()" class="dark-btn">🌙</button>
+</nav>
+
+<h2 class="main">Welcome to the CO-PO Mapping</h2>
+
+<table id="coTable">
+<tr>
+<th>CO1</th>
+<td><input id="course1"></td>
+<td id="KC1"></td>
+</tr>
+<tr>
+<th>CO2</th>
+<td><input id="course2"></td>
+<td id="KC2"></td>
+</tr>
+<tr>
+<th>CO3</th>
+<td><input id="course3"></td>
+<td id="KC3"></td>
+</tr>
+<tr>
+<th>CO4</th>
+<td><input id="course4"></td>
+<td id="KC4"></td>
+</tr>
+<tr>
+<th>CO5</th>
+<td><input id="course5"></td>
+<td id="KC5"></td>
+</tr>
+</table>
+
+
+
+
+
+<div class="button-container">
+
+<button onclick="checkword()">Check Mapping</button>
+
+<button onclick="location.href='mapping.html'">
+Proceed to Mapping
+</button>
+
+<button onclick="location.href='table.html'">
+Go to Table
+</button>
+</div>
+
+<footer>
+<div onclick="window.open('https://i.pinimg.com/736x/a7/75/1d/a7751d69375fc06208597e38e19bbd9f.jpg')">
+<p>© created by team 7</p>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

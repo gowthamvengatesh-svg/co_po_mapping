@@ -35,7 +35,42 @@ button{
     padding:8px 15px;
     margin:5px;
 }
+.table-wrapper{
+    overflow-x:auto;
+}
 
+@media (max-width:768px){
+
+    body{
+        font-size:14px;
+    }
+
+    table{
+        font-size:12px;
+        min-width:1000px; 
+    }
+
+    th,td{
+        padding:8px;
+    }
+
+    input{
+        font-size:14px;
+        height:35px;
+    }
+
+    button{
+        width:90%;
+        font-size:16px;
+        padding:12px;
+    }
+
+    .button-container{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+}
 
 @media print{
     button{display:none;}
@@ -81,6 +116,7 @@ button{
 
 <h3 class="main">CO-PO - PSO Mapping</h3>
 
+<div class="table-wrapper">
 <table id="mappingTable">
 
 <tr>
@@ -169,6 +205,7 @@ button{
 
 </tbody>
 </table>
+</div>
 
 <div class="button-container">
 <button onclick="checkword()">Check Mapping</button>
@@ -347,7 +384,9 @@ document.addEventListener("click",function(e){
         cell.innerHTML="";
         input.type="text";
         input.value=oldValue;
-        input.style.width="40px";
+        input.style.width="60px";
+        input.style.height="35px";
+        input.style.fontSize="16px";
         cell.appendChild(input);
         input.focus();
 

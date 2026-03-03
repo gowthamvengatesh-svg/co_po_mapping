@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mapping</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+<a href="home.html">Home</a>
+<a href="mapping.html">Mapping</a>
+<a href="table.html">Table</a>
+<button onclick="toggleDark()" class="dark-btn">🌙</button>
+</nav>
+
+<h2 class="main">PO K-Level Details</h2>
+
+<h3>PO1:</h3>
+<p><strong>Engineering Knowledge:</strong> Apply knowledge of mathematics, natural science,computing,
+engineering fundamentals and an engineering specialization as specified in WK1 to
+WK4 respectively to develop to the solution of complex engineering problems.</p>
+
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Sl.No</th>
+    <th>Details</th>
+    <th>Yes</th>
+    <th>No</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td></td>
+    <td><input type="radio" name="PO1_q1" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO1_q1" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td></td>
+    <td><input type="radio" name="PO1_q2" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO1_q2" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td></td>
+    <td><input type="radio" name="PO1_q3" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO1_q3" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td></td>
+    <td><input type="radio" name="PO1_q4" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO1_q4" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td colspan="2" style="text-align: right;"><strong>SUGGESTED VALUE</strong></td>
+    <td colspan="2" class="suggested-value">0</td>
+</tr>
+
+</table>
+
+<h3>PO2:</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Sl.No</th>
+    <th>Details</th>
+    <th>Yes</th>
+    <th>No</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td></td>
+    <td><input type="radio" name="PO2_q1" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO2_q1" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td></td>
+    <td><input type="radio" name="PO2_q2" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO2_q2" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td></td>
+    <td><input type="radio" name="PO2_q3" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO2_q3" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td></td>
+    <td><input type="radio" name="PO2_q4" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO2_q4" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td colspan="2" style="text-align: right;"><strong>SUGGESTED VALUE</strong></td>
+    <td colspan="2" class="suggested-value">0</td>
+</tr>
+
+</table>
+
+<h3>PO3:</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Sl.No</th>
+    <th>Details</th>
+    <th>Yes</th>
+    <th>No</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td></td>
+    <td><input type="radio" name="PO3_q1" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO3_q1" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td></td>
+    <td><input type="radio" name="PO3_q2" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO3_q2" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td></td>
+    <td><input type="radio" name="PO3_q3" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO3_q3" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td></td>
+    <td><input type="radio" name="PO3_q4" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO3_q4" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td colspan="2" style="text-align: right;"><strong>SUGGESTED VALUE</strong></td>
+    <td colspan="2" class="suggested-value">0</td>
+</tr>
+
+</table>
+
+<h3>PO4:</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Sl.No</th>
+    <th>Details</th>
+    <th>Yes</th>
+    <th>No</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td></td>
+    <td><input type="radio" name="PO4_q1" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO4_q1" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td></td>
+    <td><input type="radio" name="PO4_q2" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO4_q2" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td></td>
+    <td><input type="radio" name="PO4_q3" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO4_q3" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td></td>
+    <td><input type="radio" name="PO4_q4" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO4_q4" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td colspan="2" style="text-align: right;"><strong>SUGGESTED VALUE</strong></td>
+    <td colspan="2" class="suggested-value">0</td>
+</tr>
+
+</table>
+
+<h3>PO5:</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Sl.No</th>
+    <th>Details</th>
+    <th>Yes</th>
+    <th>No</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td></td>
+    <td><input type="radio" name="PO5_q1" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO5_q1" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td></td>
+    <td><input type="radio" name="PO5_q2" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO5_q2" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td></td>
+    <td><input type="radio" name="PO5_q3" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO5_q3" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td></td>
+    <td><input type="radio" name="PO5_q4" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO5_q4" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td colspan="2" style="text-align: right;"><strong>SUGGESTED VALUE</strong></td>
+    <td colspan="2" class="suggested-value">0</td>
+</tr>
+
+</table>
+
+<h3>PO6:</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Sl.No</th>
+    <th>Details</th>
+    <th>Yes</th>
+    <th>No</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td></td>
+    <td><input type="radio" name="PO6_q1" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO6_q1" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td></td>
+    <td><input type="radio" name="PO6_q2" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO6_q2" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td></td>
+    <td><input type="radio" name="PO6_q3" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO6_q3" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td></td>
+    <td><input type="radio" name="PO6_q4" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO6_q4" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td colspan="2" style="text-align: right;"><strong>SUGGESTED VALUE</strong></td>
+    <td colspan="2" class="suggested-value">0</td>
+</tr>
+
+</table>
+
+<h3>PO7:</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Sl.No</th>
+    <th>Details</th>
+    <th>Yes</th>
+    <th>No</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td></td>
+    <td><input type="radio" name="PO7_q1" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO7_q1" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td></td>
+    <td><input type="radio" name="PO7_q2" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO7_q2" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td></td>
+    <td><input type="radio" name="PO7_q3" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO7_q3" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td></td>
+    <td><input type="radio" name="PO7_q4" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO7_q4" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td colspan="2" style="text-align: right;"><strong>SUGGESTED VALUE</strong></td>
+    <td colspan="2" class="suggested-value">0</td>
+</tr>
+
+</table>
+
+<h3>PO8:</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Sl.No</th>
+    <th>Details</th>
+    <th>Yes</th>
+    <th>No</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td></td>
+    <td><input type="radio" name="PO8_q1" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO8_q1" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td></td>
+    <td><input type="radio" name="PO8_q2" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO8_q2" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td></td>
+    <td><input type="radio" name="PO8_q3" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO8_q3" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td></td>
+    <td><input type="radio" name="PO8_q4" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO8_q4" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td colspan="2" style="text-align: right;"><strong>SUGGESTED VALUE</strong></td>
+    <td colspan="2" class="suggested-value">0</td>
+</tr>
+
+</table>
+
+<h3>PO9:</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Sl.No</th>
+    <th>Details</th>
+    <th>Yes</th>
+    <th>No</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td></td>
+    <td><input type="radio" name="PO9_q1" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO9_q1" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td></td>
+    <td><input type="radio" name="PO9_q2" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO9_q2" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td></td>
+    <td><input type="radio" name="PO9_q3" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO9_q3" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td></td>
+    <td><input type="radio" name="PO9_q4" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO9_q4" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td colspan="2" style="text-align: right;"><strong>SUGGESTED VALUE</strong></td>
+    <td colspan="2" class="suggested-value">0</td>
+</tr>
+
+</table>
+
+<h3>PO10:</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Sl.No</th>
+    <th>Details</th>
+    <th>Yes</th>
+    <th>No</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td></td>
+    <td><input type="radio" name="PO10_q1" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO10_q1" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td></td>
+    <td><input type="radio" name="PO10_q2" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO10_q2" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td></td>
+    <td><input type="radio" name="PO10_q3" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO10_q3" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td></td>
+    <td><input type="radio" name="PO10_q4" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO10_q4" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td colspan="2" style="text-align: right;"><strong>SUGGESTED VALUE</strong></td>
+    <td colspan="2" class="suggested-value">0</td>
+</tr>
+
+</table>
+
+<h3>PO11:</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Sl.No</th>
+    <th>Details</th>
+    <th>Yes</th>
+    <th>No</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td></td>
+    <td><input type="radio" name="PO11_q1" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO11_q1" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td></td>
+    <td><input type="radio" name="PO11_q2" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO11_q2" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td></td>
+    <td><input type="radio" name="PO11_q3" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO11_q3" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td></td>
+    <td><input type="radio" name="PO11_q4" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO11_q4" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td colspan="2" style="text-align: right;"><strong>SUGGESTED VALUE</strong></td>
+    <td colspan="2" class="suggested-value">0</td>
+</tr>
+
+</table>
+
+<h3>PSO1:</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Sl.No</th>
+    <th>Details</th>
+    <th>Yes</th>
+    <th>No</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td></td>
+    <td><input type="radio" name="PO12_q1" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO12_q1" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td></td>
+    <td><input type="radio" name="PO12_q2" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO12_q2" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td></td>
+    <td><input type="radio" name="PO12_q3" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO12_q3" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td></td>
+    <td><input type="radio" name="PO12_q4" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO12_q4" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td colspan="2" style="text-align: right;"><strong>SUGGESTED VALUE</strong></td>
+    <td colspan="2" class="suggested-value">0</td>
+</tr>
+
+</table>
+
+<h3>PSO2:</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Sl.No</th>
+    <th>Details</th>
+    <th>Yes</th>
+    <th>No</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td></td>
+    <td><input type="radio" name="PSO2_q1" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PSO2_q1" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td></td>
+    <td><input type="radio" name="PO12_q2" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PO12_q2" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td></td>
+    <td><input type="radio" name="PSO2_q3" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PSO2_q3" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td></td>
+    <td><input type="radio" name="PSO2_q4" value="yes" onclick="updateTotal()"></td>
+    <td><input type="radio" name="PSO2_q4" value="no" onclick="updateTotal()"></td>
+</tr>
+
+<tr>
+    <td colspan="2" style="text-align: right;"><strong>SUGGESTED VALUE</strong></td>
+    <td colspan="2" class="suggested-value">0</td>
+</tr>
+
+</table>
+<div class="button-container">
+<button onclick="location.href='table.html'">
+Go to Table
+</button>
+</div>
+
+<footer>
+    <div onclick="window.open('https://i.pinimg.com/736x/a7/75/1d/a7751d69375fc06208597e38e19bbd9f.jpg')">
+    <p >© created by team 7</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
